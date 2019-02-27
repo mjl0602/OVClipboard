@@ -15,10 +15,10 @@ public class OvclipboardPlugin implements MethodCallHandler {
 
   private Registrar registrar;
 
-  private ClipboardManagerPlugin(Registrar registrar){
+  private OvclipboardPlugin(Registrar registrar){
     this.registrar=registrar;
   }
-  
+
   /** Plugin registration. */
   public static void registerWith(Registrar registrar) {
     final MethodChannel channel = new MethodChannel(registrar.messenger(), "ovclipboard");
