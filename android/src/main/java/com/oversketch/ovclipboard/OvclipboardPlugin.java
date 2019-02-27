@@ -22,7 +22,7 @@ public class OvclipboardPlugin implements MethodCallHandler {
   /** Plugin registration. */
   public static void registerWith(Registrar registrar) {
     final MethodChannel channel = new MethodChannel(registrar.messenger(), "ovclipboard");
-    channel.setMethodCallHandler(new OvclipboardPlugin());
+    channel.setMethodCallHandler(new OvclipboardPlugin(registrar));
   }
 
   @Override
